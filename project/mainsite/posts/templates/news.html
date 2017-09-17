@@ -30,7 +30,7 @@
 <h1>  {{  post.title  }} </h1>
 
 <div id="post">
-<a href="/posts/"+{{ post.title  }}>登入</a>
+<p>  {{  post.content |safe }} </p>
 </div>
 {% endif %}
 {%  endfor %}

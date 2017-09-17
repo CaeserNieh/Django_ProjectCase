@@ -15,3 +15,8 @@ def home(request):
 	posts = News.objects.all()
 	return render(request,template,{'news':posts})
 
+def news(request,param):
+	context = locals()
+	template = 'post_new.html'
+	posts = News.objects.filter(title=param)
+	return render(request,template,{'news':posts})

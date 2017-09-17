@@ -3,6 +3,8 @@
 
 
 {% block confirm_example %}
+
+
 <div id="content" class="site-content" style="background-color: #fff;">
 
 	<div class="container">
@@ -21,20 +23,25 @@
 
 	<div class="entry-content">
 
-    <div class="um um-login um-183">
+    <div class="row">
 
-  <div class="um-form">
+
   
  {%  for post in news %}
+
+
  {%  if  request.user.groups.all.0|slugify ==  post.group %}
+ <div class="col-lg-4 col-sm-6 portfolio-item">
 <h1>  {{  post.title  }} </h1>
 
 <div id="post">
-<a href="/posts/"+{{ post.title  }}>登入</a>
+<p>  {{  post.content |safe }} </p>
 </div>
+
 {% endif %}
+</div>
 {%  endfor %}
-  </div>
+
   
 </div><style type="text/css">.um-183.um{max-width:450px}.um-183.um .um-tip:hover,
 .um-183.um .um-field-radio.active:not(.um-field-radio-state-disabled) i,

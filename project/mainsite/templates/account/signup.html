@@ -141,13 +141,13 @@ body.custom-background { background-image: url("{% static 'img/-e1500032553961.j
 		{%  csrf_token %}
 		<div class="um-row _um_row_1 " style="margin: 0 0 30px 0;"><div class="um-col-121">
 
-		<div class="um-field um-field-last_name um-field-text" data-key="last_name"><div class="um-field-label"><label for="last_name-182">姓氏</label><div class="um-clear"></div></div><div class="um-field-area">
-						{{  form.first_name  }}
+		<div class="um-field um-field-last_name um-field-text" data-key="last_name"><div class="um-field-label"><label for="last_name-182">中文姓名</label><div class="um-clear"></div></div><div class="um-field-area">
+						{{  form.chinese_name  }}
 						</div></div>
 
 
-						<div class="um-field um-field-first_name um-field-text" data-key="first_name"><div class="um-field-label"><label for="first_name-182">名</label><div class="um-clear"></div></div><div class="um-field-area">
-						{{  form.last_name  }}
+						<div class="um-field um-field-first_name um-field-text" data-key="first_name"><div class="um-field-label"><label for="first_name-182">英文名稱(護照)</label><div class="um-clear"></div></div><div class="um-field-area">
+						{{  form.english_name  }}
 
 						</div></div>
 
@@ -169,13 +169,26 @@ body.custom-background { background-image: url("{% static 'img/-e1500032553961.j
 
 						</div></div>
 
-						<div class="um-field um-field-mobile_number um-field-text" data-key="mobile_number"><div class="um-field-label"><label for="mobile_number-182">行動電話</label><div class="um-clear"></div></div><div class="um-field-area">{{  form.number  }}
+						<div class="um-field um-field-mobile_number um-field-text" data-key="mobile_number"><div class="um-field-label"><label for="mobile_number-182">性別</label><div class="um-clear"></div></div><div class="um-field-area">{{  form.gender  }}
 
 						</div></div>
 
 
-						<div class="um-field um-field-country um-field-select" data-key="country"><div class="um-field-label"><label for="country-182">居住城市</label><div class="um-clear"></div></div><div class="um-field-area  ">
-							{{ form.city }}
+						<div class="um-field um-field-mobile_number um-field-text" data-key="mobile_number"><div class="um-field-label"><label for="mobile_number-182">行動電話</label><div class="um-clear"></div></div><div class="um-field-area">{{  form.number  }}
+
+						</div></div>
+
+						<div class="um-field um-field-mobile_number um-field-text" data-key="mobile_number"><div class="um-field-label"><label for="mobile_number-182">家用電話</label><div class="um-clear"></div></div><div class="um-field-area">{{  form.home_number  }}
+
+						</div></div>
+
+						<div class="um-field um-field-mobile_number um-field-text" data-key="mobile_number"><div class="um-field-label"><label for="mobile_number-182">生日(西元)</label><div class="um-clear"></div></div><div class="um-field-area">{{  form.birth  }}
+
+						</div></div>
+
+
+						<div class="um-field um-field-country um-field-select" data-key="country"><div class="um-field-label"><label for="country-182">家中住址</label><div class="um-clear"></div></div><div class="um-field-area  ">
+							{{ form.address }}
 
 						</div></div></div><div class="um-clear"></div></div>
 							

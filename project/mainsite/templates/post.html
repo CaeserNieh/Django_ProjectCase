@@ -26,21 +26,39 @@
     <div class="row">
 
 
-  
+ 
  {%  for post in news %}
 
 
- {%  if  request.user.groups.all.0|slugify ==  post.group %}
+ {%  if  request.user.groups.all.0|slugify >=  post.group %}
  <div class="col-lg-4 col-sm-6 portfolio-item">
-<h1>  {{  post.title  }} </h1>
+ 	<div class="card h-100">
+	 	<a href="#">
+	 		<img class ="card-img-top" src="{% static 'img/books.png'  %}" alt>
+	 	</a>
+	 	<div class="card-body">
+		 	<h3 class="card-title">
+		 		<button type="button" class="btn btn-danger">{{  post.title  }} </button>
+		 	</h3>
+	 	</div>
+ 	</div>
+ </div>
 
-<div id="post">
-<p>  {{  post.content |safe }} </p>
-</div>
 
 {% endif %}
-</div>
+
 {%  endfor %}
+
+<!--
+	<h3 class="card-title">
+		<a href="#" title="post_title">{{  post.title  }}</a>
+		<input type="Button"  value= {{  post.title  }}  onclick = "location.href='/' ">
+	</h3>
+
+-->
+
+
+
 
   
 </div><style type="text/css">.um-183.um{max-width:450px}.um-183.um .um-tip:hover,
