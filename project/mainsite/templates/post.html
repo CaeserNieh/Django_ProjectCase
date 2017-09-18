@@ -33,13 +33,13 @@
  {%  if  request.user.groups.all.0|slugify >=  post.group %}
  <div class="col-lg-4 col-sm-6 portfolio-item">
  	<div class="card h-100">
-	 	<a href="#">
+	 	<a href=" {{post.title}} ">
 	 		<img class ="card-img-top" src="{% static 'img/books.png'  %}" alt>
 	 	</a>
 	 	<div class="card-body">
-		 	<h3 class="card-title">
-		 		<button type="button" class="btn btn-danger">{{  post.title  }} </button>
-		 	</h3>
+		 	<h4 class="card-title">
+		 		<a href=" {{post.title}} " title="post_title">{{  post.title  }}</a>
+		 	</h4>
 	 	</div>
  	</div>
  </div>
@@ -50,6 +50,9 @@
 {%  endfor %}
 
 <!--
+
+<button type="button" class="btn btn-danger">{{  post.title  }} </button>
+
 	<h3 class="card-title">
 		<a href="#" title="post_title">{{  post.title  }}</a>
 		<input type="Button"  value= {{  post.title  }}  onclick = "location.href='/' ">

@@ -29,17 +29,14 @@
   
  {%  for post in news %}
 
-
- {%  if  request.user.groups.all.0|slugify ==  post.group %}
- <div class="col-lg-4 col-sm-6 portfolio-item">
+ 
 <h1>  {{  post.title  }} </h1>
 
 <div id="post">
 <p>  {{  post.content |safe }} </p>
 </div>
 
-{% endif %}
-</div>
+
 {%  endfor %}
 
   
