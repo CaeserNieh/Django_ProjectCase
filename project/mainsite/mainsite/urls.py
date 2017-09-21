@@ -21,6 +21,9 @@ from contact import views as contact_views
 from django.conf.urls import include
 from posts import views as posts_views 
 
+from training import views as train_views
+
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -33,6 +36,10 @@ urlpatterns = [
     url(r'^ckeditor/',include('ckeditor_uploader.urls')),
     url(r'^posts/$',posts_views.home,name='home'),
     url(r'^posts/(.+)/$',posts_views.news,name='news'),
+    url(r'^train/boss/',train_views.trainingboss,name='train_boss'),
+    url(r'^train/dealer/',train_views.trainingdealer,name='train_dealer'),
+
+
 ]
 
 

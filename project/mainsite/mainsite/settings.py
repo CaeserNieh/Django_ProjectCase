@@ -119,6 +119,7 @@ INSTALLED_APPS = [
     'posts',
     'ckeditor',
     'ckeditor_uploader',
+    'training',
 ]
 
 MIDDLEWARE = [
